@@ -14,9 +14,11 @@ use solana_program::{
 use solana_program::program_error::ProgramError;
 use state::counter::CounterState;
 
-pub mod instructions;
+#[cfg(test)]
+mod tests;
 pub mod state;
 pub mod constants;
+pub mod instructions;
 
 entrypoint!(native_counter_program);
 
